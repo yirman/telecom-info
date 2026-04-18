@@ -1,0 +1,114 @@
+function myFunction(menuItem) {
+    if(menuItem=="visit") {
+  var x = document.getElementById("subDropMobile");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+ document.getElementById("linkMobileVisit").innerHTML='Visit <i class="fa fa-angle-up"></i>';
+  } else {
+    x.style.display = "none";
+ document.getElementById("linkMobileVisit").innerHTML='Visit <i class="fa fa-angle-down"></i>';
+           var y= document.getElementById("mobileMenu1");
+  }
+    } else if(menuItem=="about") {
+  var x = document.getElementById("subDropMobileAbout");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+ document.getElementById("linkMobileAbout").innerHTML='About <i class="fa fa-angle-up"></i>';
+  } else {
+    x.style.display = "none";
+ document.getElementById("linkMobileAbout").innerHTML='About <i class="fa fa-angle-down"></i>';
+           var y= document.getElementById("mobileMenu1");
+  }
+    } else if(menuItem=="resources") {
+  var x = document.getElementById("subDropMobileResources");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+ document.getElementById("linkMobileResources").innerHTML='Resources <i class="fa fa-angle-up"></i>';
+  } else {
+    x.style.display = "none";
+ document.getElementById("linkMobileResources").innerHTML='Resources <i class="fa fa-angle-down"></i>';
+           var y= document.getElementById("mobileMenu1");
+  }
+    }
+}
+            
+function myFunction2(menuItem) {
+    if(hovered=="no") {
+        clicked = "yes";
+        if(menuItem=="visit") {
+  var x = document.getElementsByClassName("dropbtn")[0];
+    var y = document.getElementsByClassName("dropdown-content")[0];
+        
+    if (y.style.display === "none" || y.style.display == "") {
+        x.style.cssText="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); text-decoration: underline; text-underline-offset: 5px;"; 
+x.innerHTML='Visit <i class="fa fa-angle-up"></i>';
+    y.style.cssText="display: block;";
+    } else {
+        x.style.cssText="box-shadow: none; text-decoration: none;";
+        y.style.cssText="display: none;";
+        x.innerHTML='Visit <i class="fa fa-angle-down"></i>';
+    }
+        } else if(menuItem=="about")
+        {var x = document.getElementsByClassName("dropbtnAbout")[0];
+var y = document.getElementsByClassName("dropdown-content-About")[0];
+         
+             if (y.style.display === "none" || y.style.display == "") {
+        x.style.cssText="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); text-decoration: underline; text-underline-offset: 5px;"; 
+x.innerHTML='About <i class="fa fa-angle-up"></i>';
+    y.style.cssText="display: block;";
+    } else {
+        x.style.cssText="box-shadow: none; text-decoration: none;";
+        y.style.cssText="display: none;";
+        x.innerHTML='About <i class="fa fa-angle-down"></i>';
+    }
+        } else if(menuItem=="resources")
+        {var x = document.getElementsByClassName("dropbtnResources")[0];
+var y = document.getElementsByClassName("dropdown-content-Resources")[0];
+         
+             if (y.style.display === "none" || y.style.display == "") {
+        x.style.cssText="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); text-decoration: underline; text-underline-offset: 5px;"; 
+x.innerHTML='Resources <i class="fa fa-angle-up"></i>';
+    y.style.cssText="display: block;";
+    } else {
+        x.style.cssText="box-shadow: none; text-decoration: none;";
+        y.style.cssText="display: none;";
+        x.innerHTML='Resources <i class="fa fa-angle-down"></i>';
+    }
+        }
+}
+}
+            
+    function myFunction3(menuItem) {
+if(window.matchMedia("(hover: hover)").matches && clicked == "no") {
+    hovered = "yes";
+    if(menuItem=="visit") {
+        var x = document.getElementsByClassName("dropbtn")[0];
+        x.innerHTML='Visit <i class="fa fa-angle-up"></i>';
+    } else if(menuItem=="about") {
+        var x = document.getElementsByClassName("dropbtnAbout")[0];
+        x.innerHTML='About <i class="fa fa-angle-up"></i>';
+    } else if(menuItem=="resources") {
+        var x = document.getElementsByClassName("dropbtnResources")[0];
+        x.innerHTML='Resources <i class="fa fa-angle-up"></i>';
+    }
+    }
+    }
+            
+    function myFunction4(menuItem) {
+if(window.matchMedia("(hover: hover)").matches && clicked == "no") {
+    hovered = "yes";
+    if(menuItem=="visit") {
+        var x = document.getElementsByClassName("dropbtn")[0];
+        x.innerHTML='Visit <i class="fa fa-angle-down"></i>';
+    } else if(menuItem=="about") {
+        var x = document.getElementsByClassName("dropbtnAbout")[0];
+        x.innerHTML='About <i class="fa fa-angle-down"></i>';
+    } else if(menuItem=="resources") {
+        var x = document.getElementsByClassName("dropbtnResources")[0];
+        x.innerHTML='Resources <i class="fa fa-angle-down"></i>';
+    }
+    }
+    }
+
+
+
