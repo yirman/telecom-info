@@ -193,6 +193,58 @@ The telephone had as big an impact on the 20th century as the Industrial Revolut
 You can also visit (or return to) our <a href="https://www.telcomhistory.org/science.html"><b>Science of Phones</b></a> exhibit for an in-depth look at some of these events.
 
                        <br><br>
+                       <!-- Carousel: 10 cards (image + short text) inserted above #wrap -->
+                       <section id="top-carousel">
+                         <div class="card-carousel">
+                           <button class="carousel-btn left" aria-label="Previous">‹</button>
+                           <div class="card-track" id="cardTrack">
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-9-1.jpg" alt="Timeline 9"><p>Before Electricity — 1200 BC</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-1-1.jpg" alt="Timeline 1"><p>1800–1900 highlights</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-2-1.jpg" alt="Timeline 2"><p>1900–1950 highlights</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-3-1.jpg" alt="Timeline 3"><p>1950–1970 highlights</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-4-1.jpg" alt="Timeline 4"><p>1970–2000 milestones</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-6-1.jpg" alt="Timeline 6"><p>2000 and beyond</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/IMG_1156.JPG" alt="Gallows phone"><p>Gallows phone (THG photo)</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/The-Telecommunications-History-Group-Logo-90x275.png" alt="THG logo"><p>The Telecommunications History Group</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/mobileMenuIcon.jpg" alt="Icon"><p>Explore exhibits</p></div>
+                             <div class="card"><img src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/Timeline-1-1.jpg" alt="Timeline 1 repeat"><p>More timeline items</p></div>
+                           </div>
+                           <button class="carousel-btn right" aria-label="Next">›</button>
+                         </div>
+                         <style>
+                           #top-carousel{width:100%;background:#f8fafb;padding:18px 0;margin-bottom:12px}
+                           .card-carousel{max-width:1100px;margin:0 auto;position:relative;padding:6px}
+                           .card-track{display:flex;gap:14px;overflow-x:auto;scroll-behavior:smooth;padding:8px 6px;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+                           .card{flex:0 0 200px;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.08);overflow:hidden;text-align:left;scroll-snap-align:start}
+                           .card img{width:100%;height:120px;object-fit:cover;display:block}
+                           .card p{margin:8px;padding:0 8px 12px;font-size:14px;color:#222}
+                           .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:20px;cursor:pointer;z-index:3}
+                           .carousel-btn.left{left:6px}
+                           .carousel-btn.right{right:6px}
+                           /* Larger screens: show multiple cards */
+                           @media (max-width:900px){
+                             .card{flex:0 0 160px}
+                             .card img{height:110px}
+                           }
+                           /* Mobile: show one card at a time, enable snapping, hide nav buttons */
+                           @media (max-width:600px){
+                             .card-track{gap:10px;padding:12px}
+                             .card{flex:0 0 80%;max-width:80%}
+                             .card img{height:160px}
+                             .carousel-btn{display:none}
+                           }
+                         </style>
+                         <script>
+                           (function(){
+                             const track = document.getElementById('cardTrack');
+                             const btnL = document.querySelector('.carousel-btn.left');
+                             const btnR = document.querySelector('.carousel-btn.right');
+                             const cardWidth = () => (track.querySelector('.card')||{offsetWidth:200}).offsetWidth + 14;
+                             btnL && btnL.addEventListener('click', ()=> track.scrollBy({left: -cardWidth()*2, behavior:'smooth'}));
+                             btnR && btnR.addEventListener('click', ()=> track.scrollBy({left: cardWidth()*2, behavior:'smooth'}));
+                           })();
+                         </script>
+
                        <div id="wrap">
 <iframe id="frame" src="./Telecommunications History Timeline _ The Telecommunications History Group, Inc._files/indexSlide2.html"></iframe>
 </div>
